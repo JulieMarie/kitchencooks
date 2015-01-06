@@ -47,7 +47,7 @@ app.use('/', routes);
 passport.use(new GitHubStrategy({
     clientID: GITHUB_CLIENT_ID,
     clientSecret: GITHUB_CLIENT_SECRET,
-    callbackURL: "http://hrr-kitchen.azurewebsites.net/auth/callback"
+    callbackURL: '/auth/github/callback'
   },
   function(accessToken, refreshToken, profile, done) {
     process.nextTick(function () {
